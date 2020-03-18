@@ -1,24 +1,24 @@
 {
     "collab_server" : "",
     "contents" : "",
-    "created" : 1583907578086.000,
+    "created" : 1584510979717.000,
     "dirty" : false,
-    "encoding" : "UTF-8",
+    "encoding" : "CP950",
     "folds" : "",
     "hash" : "0",
-    "id" : "CADF5F24",
+    "id" : "B90C91BC",
     "lastKnownWriteTime" : 1583909259,
     "last_content_update" : 1583909259,
     "path" : "~/GitHub/108-2-56-inclass-practice/README.md",
     "project_path" : "README.md",
     "properties" : {
-        "cursorPosition" : "2,0",
+        "cursorPosition" : "2,6",
         "scrollLine" : "0"
     },
     "read_only" : false,
     "read_only_alternatives" : [
     ],
-    "relative_order" : 1,
+    "relative_order" : 2,
     "source_on_save" : false,
     "source_window" : "",
     "type" : "markdown"
