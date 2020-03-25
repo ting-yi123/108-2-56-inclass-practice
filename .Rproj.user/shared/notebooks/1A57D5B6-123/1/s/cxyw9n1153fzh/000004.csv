@@ -1,19 +1,11 @@
-"0","install.packages(""httuv"")"
-"2","WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
-
-https://cran.rstudio.com/bin/windows/Rtools/
-"
-"2","Installing package into ¡¥C:/Users/show time/Documents/R/win-library/3.6¡¦
-(as ¡¥lib¡¦ is unspecified)
-"
-"1","Warning in "
+"0","install.packages(""httpuv"", repos = ""https://wush978.github.io/R"")"
+"1","Error in "
 "1",""
 "1","install.packages"
 "1",""
-"1"," :
-  "
+"1"," : "
 "1",""
-"1","package â€˜httuvâ€™ is not available (for R version 3.6.3)"
+"1","Updating loaded packages"
 "1",""
 "1","
 "

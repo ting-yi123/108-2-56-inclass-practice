@@ -117,13 +117,14 @@ library(googlesheets4)
 'ss' <-  ("https://docs.google.com/spreadsheets/d/1EAG49qDKPWWi0ebkVr29TLrvVnoBPfkvxYY-J3xLAHY/edit#gid=458686645")
 homework_sheet <- sheets_read(ss,sheet=1)
 #左邊不能出現雙引號或單引號
+#錯的
 ```
 
 ```{r}
 library(googlesheets4)
 `出席狀況表單網址` <-  ("https://docs.google.com/spreadsheets/d/1EAG49qDKPWWi0ebkVr29TLrvVnoBPfkvxYY-J3xLAHY/edit#gid=458686645")
 ss <- as_sheets_id(`出席狀況表單網址`)
-homework_sheet <- sheets_read(ss,sheet=1)4/xwGkH2ii2yuHjT3g2TNueuJfIQ-qOoLiePEJFvK1o_Vzoq6bpzcPrSM
+homework_sheet <- sheets_read(ss,sheet=1)
 ```
 
 ```{r}
@@ -131,6 +132,14 @@ logi1 <- c(T,TRUE,F,FALSE,FALSE)
 sum(logi1)
 ```
 ```{r}
-install.packages("httuv")
+install.packages("httpuv", repos = "https://wush978.github.io/R")
+```
+
+```{r}
+# 10位學生的主系
+majors10_char <- c('經濟學系','社會學系','社會學系','經濟學系','經濟學系','社會學系','經濟學系','經濟學系','經濟學系','社會學系')
+
+typeof(majors10_char)
+class(majors10_char)
 ```
 
