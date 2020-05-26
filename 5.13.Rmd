@@ -46,13 +46,6 @@ example$name[
 library(stringr)
 library(glue)
 ```
-```{r}
-install.packages("stringr")
-```
-```{r}
-install.packages("glue")
-```
-
 
 ```{r}
 str_sub("410873002", 5, 6)
@@ -86,5 +79,63 @@ str_extract(
   c("民國108年12月5日","民國98年10月5日"),
   "(?<=民國)[0-9]{2,3}(?=年)"
 ) # 回傳vector 
+```
+```{r}
+heartSutra <- c("舍利子，色不異空，空不異色；色即是空，空即是色。")
+str_view_all(heartSutra,"色") # 檢視
+str_count(heartSutra,"色") # 計數
+```
+```{r}
+studentIds <- c("410873029","410773005","410772035","410562123")
+# 取出學號中的入學屆為107或108
+str_view_all(studentIds,"(107|108)")
+
+str_view_all(studentIds, "107|108") # 可不寫()
+
+# 是否來自107或108學屆
+str_detect(studentIds, "107|108")
+```
+```{r}
+Ids <- c("A283743192","B829103720","A10920402","C291022384")
+
+str_view_all(Ids, "[AC]")
+str_detect(Ids, "[AC]") # 偵測 出現A、C
+
+str_extract(Ids,"[A-Z]") # 取出 A-Z的字元
+```
+```{r}
+strip1 <- "[0-9]"
+strip2 <- "(櫻桃|777|紅心)" # 字群組合strip因為等下放中間所以用()括起來
+strip3 <- "[A-Z]"
+myRegexSlotMachine <- paste0(strip1,strip2,strip3)
+print(myRegexSlotMachine)
+```
+```{r}
+str_extract_all(
+  c("民國108年12月5日","民國98年10月5日"),
+  "(?<=民國)[0-9]{2,3}(?=年)"
+) # 回傳list 
+
+str_extract(
+  c("民國108年12月5日","民國98年10月5日"),
+  "(?<=民國)[0-9]{2,3}(?=年)"
+) # 回傳vector 
+```
+
+```{r}
+jsonlite::fromJSON("https://od.cdc.gov.tw/eic/Day_Confirmation_Age_County_Gender_19CoV.json") -> covid19
+```
+
+```{r}
+# 不可排序類別：性別、縣市、是否境外移入
+covid19$縣市 <- 
+  factor(covid19$縣市)
+covid19$性別 <-
+  factor(covid19$性別)
+covid19$是否為境外移入 <-
+  factor(
+    covid19$是否為境外移入
+  )
+print(covid19$縣市)
 ```
 
